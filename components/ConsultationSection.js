@@ -15,7 +15,7 @@ const ConsultationSection = () => (
       <form className="grid grid-cols-1 gap-4 bg-white/10 p-8 rounded-lg">
         <div className="grid sm:grid-cols-2 gap-4">
           <div>
-            {/* FIX: Added a label for the select element. */}
+            {/* FIX: Added a visually hidden label for the select element. */}
             <label htmlFor="consultation-topic" className="sr-only">I would like to discuss:</label>
             <select
               id="consultation-topic"

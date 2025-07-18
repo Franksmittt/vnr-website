@@ -16,10 +16,7 @@ const CoreServicesSection = () => (
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        {/*
-          FIX: The props now match what the 'ProvidedServiceCard' component expects.
-          'image' is now 'imageUrl' and 'imageAlt' is now 'alt' to ensure the alt tag is passed correctly.
-        */}
+        {/* FIX: Corrected prop names to 'imageUrl' and 'alt' to match the child component. */}
         <ServiceCard
           imageUrl="/images/services/tax-compliance.jpg"
           alt="Tax compliance services illustration"
