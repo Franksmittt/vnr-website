@@ -14,22 +14,31 @@ const ConsultationSection = () => (
 
       <form className="grid grid-cols-1 gap-4 bg-white/10 p-8 rounded-lg">
         <div className="grid sm:grid-cols-2 gap-4">
-          <select className="w-full p-3 bg-white/90 text-gray-700 rounded-md focus:ring-2 focus:ring-teal-400">
-            <option>I would like to discuss…</option>
-            <option>Tax & Compliance</option>
-            <option>Wealth & Estate Planning</option>
-            <option>Business Valuations</option>
-            <option>Other Advisory Services</option>
-          </select>
+          <div>
+            <label htmlFor="consultation-topic" className="sr-only">I would like to discuss:</label>
+            <select
+              id="consultation-topic"
+              name="consultation-topic"
+              className="w-full p-3 bg-white/90 text-gray-700 rounded-md focus:ring-2 focus:ring-teal-400"
+            >
+              <option>I would like to discuss…</option>
+              <option>Tax & Compliance</option>
+              <option>Wealth & Estate Planning</option>
+              <option>Business Valuations</option>
+              <option>Other Advisory Services</option>
+            </select>
+          </div>
           <input
             type="email"
             placeholder="Your Email"
+            aria-label="Your Email"
             className="w-full p-3 bg-white/90 text-gray-700 rounded-md focus:ring-2 focus:ring-teal-400"
           />
         </div>
         <input
           type="tel"
           placeholder="Your Phone Number"
+          aria-label="Your Phone Number"
           className="w-full p-3 bg-white/90 text-gray-700 rounded-md focus:ring-2 focus:ring-teal-400"
         />
         <button

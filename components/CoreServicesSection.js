@@ -1,12 +1,6 @@
 'use client';
 import React from 'react';
-import ServiceCard from './ServiceCard'; // This uses the correct ICON card
-import {
-  TaxComplianceIcon,
-  FinancialReportingIcon,
-  BusinessValuationIcon,
-  SecretarialIcon,
-} from './Icons';
+import ProvidedServiceCard from './ProvidedServiceCard';
 
 const CoreServicesSection = () => (
   <section className="bg-gray-50 py-20">
@@ -22,20 +16,34 @@ const CoreServicesSection = () => (
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <ServiceCard icon={<TaxComplianceIcon />} title="TAX COMPLIANCE">
-          Navigate the complexities of tax with confidence, ensuring full compliance while optimising your tax position.
-        </ServiceCard>
-        <ServiceCard icon={<FinancialReportingIcon />} title="FINANCIAL REPORTING">
-          Gain a clear view of your financial health with accurate, insightful statements that serve as your blueprint for growth.
-        </ServiceCard>
-        <ServiceCard icon={<BusinessValuationIcon />} title="BUSINESS VALUATIONS">
-          Understand the true value of your enterprise with our expert valuation services, critical for strategic
-          planning and transactions.
-        </ServiceCard>
-        <ServiceCard icon={<SecretarialIcon />} title="COMPANY SECRETARIAL">
-          Ensure your business meets all its statutory and regulatory obligations with our comprehensive secretarial
-          services.
-        </ServiceCard>
+        <ProvidedServiceCard
+          imageUrl="/images/services/tax-compliance.webp"
+          alt="Tax compliance services illustration"
+          title="TAX COMPLIANCE"
+          description="Navigate the complexities of tax with confidence, ensuring full compliance while optimising your tax position."
+          href="/services/tax-advisory"
+        />
+        <ProvidedServiceCard
+          imageUrl="/images/services/financial-reporting.webp"
+          alt="Financial reporting services illustration"
+          title="FINANCIAL REPORTING"
+          description="Gain a clear view of your financial health with accurate, insightful statements that serve as your blueprint for growth."
+          href="/services/financial-reporting"
+        />
+        <ProvidedServiceCard
+          imageUrl="/images/services/business-valuations.webp"
+          alt="Business valuation services illustration"
+          title="BUSINESS VALUATIONS"
+          description="Understand the true value of your enterprise with our expert valuation services, critical for strategic planning and transactions."
+          href="/services/business-valuations"
+        />
+        <ProvidedServiceCard
+          imageUrl="/images/services/secretarial.webp"
+          alt="Company secretarial services illustration"
+          title="COMPANY SECRETARIAL"
+          description="Ensure your business meets all its statutory and regulatory obligations with our comprehensive secretarial services."
+          href="/services/secretarial"
+        />
       </div>
     </div>
   </section>

@@ -13,7 +13,8 @@ const FeaturedArticleCard = ({ article }) => (
         <h2 className="mt-2 text-2xl md:text-3xl font-bold text-slate-900 group-hover:text-blue-800 transition-colors duration-300">{article.title}</h2>
         <p className="mt-4 text-slate-500">{article.excerpt}</p>
         <div className="mt-6 flex items-center text-sm">
-          <img src={article.author.imageUrl} alt={article.author.name} className="w-10 h-10 rounded-full mr-3" />
+          {/* Replaced <img> with <Image />. Used width and height based on the old Tailwind classes (w-10, h-10 => 40px) */}
+          <Image src={article.author.imageUrl} alt={article.author.name} width={40} height={40} className="w-10 h-10 rounded-full mr-3" />
           <div>
             <p className="font-semibold text-slate-800">{article.author.name}</p>
             <p className="text-slate-500">{article.date}</p>

@@ -1,7 +1,7 @@
 'use client';
-
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { usePathname } from 'next/navigation';
+import Link from 'next/link'; // Import the Link component
 import {
   Home,
   Briefcase,
@@ -18,7 +18,8 @@ const NavItem = ({ href, children, Icon }) => {
   const active = pathname === href;
 
   return (
-    <a
+    // Use Link for navigation
+    <Link
       href={href}
       className={`flex items-center gap-2 px-4 py-2 rounded-md text-sm font-medium transition-all duration-300
         ${
@@ -29,28 +30,27 @@ const NavItem = ({ href, children, Icon }) => {
     >
       <Icon className="w-5 h-5" />
       {children}
-    </a>
+    </Link>
   );
 };
 
 const Header = () => {
   const [open, setOpen] = useState(false);
-
   const nav = [
-    { href: '/',       label: 'Home',     Icon: Home },
+    { href: '/', label: 'Home', Icon: Home },
     { href: '/services', label: 'Services', Icon: Briefcase },
-    { href: '/team',     label: 'Team',     Icon: Users },
+    { href: '/team', label: 'Team', Icon: Users },
     { href: '/insights', label: 'Insights', Icon: Newspaper },
-    { href: '/contact',  label: 'Contact',  Icon: Mail },
+    { href: '/contact', label: 'Contact', Icon: Mail },
   ];
 
   return (
     <header className="bg-gradient-to-r from-blue-800 to-teal-700 text-white shadow-lg sticky top-0 z-50 font-sans">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20">
-        {/* Logo */}
-        <a href="/" className="text-3xl font-bold tracking-wider">
+        {/* Logo - Use Link instead of <a> */}
+        <Link href="/" className="text-3xl font-bold tracking-wider">
           VNR
-        </a>
+        </Link>
 
         {/* Desktop nav */}
         <nav className="hidden md:flex items-center space-x-1">
@@ -63,6 +63,7 @@ const Header = () => {
 
         {/* Call-us + mobile toggle */}
         <div className="flex items-center">
+          {/* Using a regular <a> tag here is correct because "tel:" is an external protocol */}
           <a
             href="tel:+27123456789"
             className="hidden lg:inline-flex items-center
@@ -89,7 +90,7 @@ const Header = () => {
       {open && (
         <nav className="md:hidden bg-blue-800 px-2 pt-2 pb-4 space-y-1">
           {nav.map((item) => (
-             <NavItem key={item.href} href={item.href} Icon={item.Icon}>
+            <NavItem key={item.href} href={item.href} Icon={item.Icon}>
               {item.label}
             </NavItem>
           ))}

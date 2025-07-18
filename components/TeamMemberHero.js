@@ -1,13 +1,20 @@
 'use client';
 import React from 'react';
+import Image from 'next/image'; // Import the Image component
 import { Linkedin, Mail as MailIcon } from 'lucide-react';
 
 const TeamMemberHero = ({ member }) => (
   <div className="bg-slate-800">
     <div className="container mx-auto px-4 py-16">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-        <div className="md:col-span-1">
-          <img src={member.imageUrl} alt={member.name} className="w-48 h-48 md:w-56 md:h-56 rounded-full object-cover mx-auto border-4 border-slate-700 shadow-2xl" />
+        <div className="md:col-span-1 flex justify-center">
+            <Image
+              src={member.imageUrl}
+              alt={member.name}
+              width={224} // w-56 = 14rem = 224px
+              height={224} // h-56 = 14rem = 224px
+              className="rounded-full object-cover border-4 border-slate-700 shadow-2xl"
+            />
         </div>
         <div className="md:col-span-2 text-center md:text-left">
           <h1 className="text-4xl md:text-5xl font-extrabold text-white tracking-tight">{member.name}</h1>
