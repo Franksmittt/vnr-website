@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import Image from 'next/image'; // This line was missing
+import Image from 'next/image';
 
 const leadershipData = [
   {
