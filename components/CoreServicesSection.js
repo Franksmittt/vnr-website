@@ -1,6 +1,8 @@
 'use client';
 import React from 'react';
-import ProvidedServiceCard from './ProvidedServiceCard';
+// The component is named ProvidedServiceCard, but the file is ServiceCard.js
+// I've kept the import name to match the file system.
+import ServiceCard from './ServiceCard';
 
 const CoreServicesSection = () => (
   <section className="bg-gray-50 py-20">
@@ -16,34 +18,41 @@ const CoreServicesSection = () => (
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <ProvidedServiceCard
-          imageUrl="/images/services/tax-compliance.webp"
+        {/*
+          FIX: The props now match what the 'ProvidedServiceCard' component expects.
+          'image' is now 'imageUrl'
+          'imageAlt' is now 'alt'
+        */}
+        <ServiceCard
+          imageUrl="/images/services/tax-compliance.jpg"
           alt="Tax compliance services illustration"
           title="TAX COMPLIANCE"
-          description="Navigate the complexities of tax with confidence, ensuring full compliance while optimising your tax position."
-          href="/services/tax-advisory"
-        />
-        <ProvidedServiceCard
-          imageUrl="/images/services/financial-reporting.webp"
+        >
+          Navigate the complexities of tax with confidence, ensuring full compliance while optimising your tax position.
+        </ServiceCard>
+        <ServiceCard
+          imageUrl="/images/services/financial-reporting.jpg"
           alt="Financial reporting services illustration"
           title="FINANCIAL REPORTING"
-          description="Gain a clear view of your financial health with accurate, insightful statements that serve as your blueprint for growth."
-          href="/services/financial-reporting"
-        />
-        <ProvidedServiceCard
-          imageUrl="/images/services/business-valuations.webp"
+        >
+          Gain a clear view of your financial health with accurate, insightful statements that serve as your blueprint for growth.
+        </ServiceCard>
+        <ServiceCard
+          imageUrl="/images/services/business-valuation.jpg"
           alt="Business valuation services illustration"
           title="BUSINESS VALUATIONS"
-          description="Understand the true value of your enterprise with our expert valuation services, critical for strategic planning and transactions."
-          href="/services/business-valuations"
-        />
-        <ProvidedServiceCard
-          imageUrl="/images/services/secretarial.webp"
+        >
+          Understand the true value of your enterprise with our expert valuation services, critical for strategic
+          planning and transactions.
+        </ServiceCard>
+        <ServiceCard
+          imageUrl="/images/services/secretarial.jpg"
           alt="Company secretarial services illustration"
           title="COMPANY SECRETARIAL"
-          description="Ensure your business meets all its statutory and regulatory obligations with our comprehensive secretarial services."
-          href="/services/secretarial"
-        />
+        >
+          Ensure your business meets all its statutory and regulatory obligations with our comprehensive secretarial
+          services.
+        </ServiceCard>
       </div>
     </div>
   </section>
