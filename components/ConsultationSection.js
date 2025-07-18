@@ -7,14 +7,12 @@ const ConsultationSection = () => (
       <div className="text-center md:text-left">
         <h2 className="text-3xl font-bold mb-4">REQUEST A CONSULTATION</h2>
         <p className="text-blue-200">
-          If you would like to speak to one of our strategic advisors about how we can help your business achieve its
-          potential, please fill in the form and we will contact you.
+          If you would like to speak to one of our strategic advisors about how we can help your business achieve its potential, please fill in the form and we will contact you.
         </p>
       </div>
       <form className="grid grid-cols-1 gap-4 bg-white/10 p-8 rounded-lg">
         <div className="grid sm:grid-cols-2 gap-4">
           <div>
-            {/* FIX: Added a visually hidden label for the select element. */}
             <label htmlFor="consultation-topic" className="sr-only">I would like to discuss:</label>
             <select
               id="consultation-topic"
@@ -43,7 +41,7 @@ const ConsultationSection = () => (
         />
         <button
           type="submit"
-          className="w-full bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 rounded-md transition-transform hover:scale-105"
+          className="w-full bg-teal-600 hover:bg-teal-700 text-white font-bold py-3 rounded-md transition-transform hover:scale-105"
         >
           Request Consultation
         </button>

@@ -16,11 +16,12 @@ const CoreServicesSection = () => (
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        {/* FIX: Props now correctly named 'imageUrl' and 'alt' */}
         <ServiceCard
           imageUrl="/images/services/tax-compliance.jpg"
           alt="Tax compliance services illustration"
           title="TAX COMPLIANCE"
+          // FIX: Added the missing href prop below
+          href="/services/tax-advisory"
         >
           Navigate the complexities of tax with confidence, ensuring full compliance while optimising your tax position.
         </ServiceCard>
@@ -28,6 +29,8 @@ const CoreServicesSection = () => (
           imageUrl="/images/services/financial-reporting.jpg"
           alt="Financial reporting services illustration"
           title="FINANCIAL REPORTING"
+          // FIX: Added the missing href prop below
+          href="/services/financial-reporting"
         >
           Gain a clear view of your financial health with accurate, insightful statements that serve as your blueprint for growth.
         </ServiceCard>
@@ -35,6 +38,8 @@ const CoreServicesSection = () => (
           imageUrl="/images/services/business-valuation.jpg"
           alt="Business valuation services illustration"
           title="BUSINESS VALUATIONS"
+          // FIX: Added the missing href prop below
+          href="/services/business-valuations"
         >
           Understand the true value of your enterprise with our expert valuation services, critical for strategic
           planning and transactions.
@@ -43,6 +48,8 @@ const CoreServicesSection = () => (
           imageUrl="/images/services/secretarial.jpg"
           alt="Company secretarial services illustration"
           title="COMPANY SECRETARIAL"
+          // FIX: Added the missing href prop below
+          href="/services/secretarial"
         >
           Ensure your business meets all its statutory and regulatory obligations with our comprehensive secretarial
           services.
