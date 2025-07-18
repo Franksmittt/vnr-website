@@ -1,7 +1,5 @@
 'use client';
 import React from 'react';
-// The component is named ProvidedServiceCard, but the file is ServiceCard.js
-// I've kept the import name to match the file system.
 import ServiceCard from './ServiceCard';
 
 const CoreServicesSection = () => (
@@ -19,7 +17,7 @@ const CoreServicesSection = () => (
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {/*
-          FIX: The props now match what the 'ProvidedServiceCard' component expects.
+          FIX: The props now match what the child component expects.
           'image' is now 'imageUrl'
           'imageAlt' is now 'alt'
         */}
