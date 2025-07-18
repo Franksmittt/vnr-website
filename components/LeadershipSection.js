@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-import Image from 'next/image';
 
 const leadershipData = [
   {
@@ -38,20 +37,23 @@ const LeadershipSection = () => (
         </h2>
         <p className="text-gray-600 text-lg mt-4 max-w-3xl mx-auto">
           Our leaders, with decades of industry-shaping experience at SAIPA, deliver insights that transform your
-           entrepreneurial journey.
+          entrepreneurial journey.
         </p>
       </div>
+
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
         {leadershipData.map((l) => (
           <div key={l.id} className="group relative">
             <div className="relative h-96 rounded-lg overflow-hidden">
-              <Image src={l.photo} alt={`${l.name} profile`} fill sizes="33vw" className="w-full h-full object-cover" />
+              <img src={l.photo} alt={`${l.name} profile`} className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
             </div>
+
             <div className="absolute bottom-0 left-0 p-6 text-white">
               <h3 className="font-bold text-2xl">{l.name}</h3>
               <p className="text-blue-200">{l.title}</p>
             </div>
+
             <div className="absolute inset-0 bg-white/95 p-6 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-center text-center">
               <h3 className="font-bold text-2xl text-blue-800">{l.name}</h3>
               <p className="text-blue-600 font-semibold my-2">{l.creds}</p>

@@ -1,11 +1,8 @@
 'use client';
-
 import React from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 
-// This component is now optimized to accept an href and use next/image and next/link.
-const ServiceCard = ({ imageUrl, alt, title, description, href }) => (
+const ProvidedServiceCard = ({ imageUrl, alt, title, description }) => (
   <div className="bg-white rounded-lg overflow-hidden group shadow-md hover:shadow-2xl transition-shadow duration-500 h-full flex flex-col">
     <div className="overflow-hidden h-48 relative">
       <Image
@@ -21,12 +18,11 @@ const ServiceCard = ({ imageUrl, alt, title, description, href }) => (
         {title}
       </h3>
       <p className="text-gray-600 text-sm mb-4 flex-grow">{description}</p>
-      {/* Use the Link component for optimized, client-side navigation */}
-      <Link href={href} className="text-blue-600 font-semibold text-sm hover:underline self-start mt-auto">
+      <a href="#" className="text-blue-600 font-semibold text-sm hover:underline self-start">
         Explore Service &rarr;
-      </Link>
+      </a>
     </div>
   </div>
 );
 
-export default ServiceCard;
+export default ProvidedServiceCard;
