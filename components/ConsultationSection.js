@@ -11,7 +11,6 @@ const ConsultationSection = () => (
           potential, please fill in the form and we will contact you.
         </p>
       </div>
-
       <form className="grid grid-cols-1 gap-4 bg-white/10 p-8 rounded-lg">
         <div className="grid sm:grid-cols-2 gap-4">
           <div>
